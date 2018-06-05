@@ -1,0 +1,23 @@
+.container {
+	width: 100%;
+	position: fixed;
+	background-color: #509fa3;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	@include clearfix();
+
+	.logo {
+		width: 300px;
+	}
+
+	.navigation {
+
+		.menu {
+
+			.menu_item {
+
+			}
+		}
+	}
+}

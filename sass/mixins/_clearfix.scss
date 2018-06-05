@@ -1,0 +1,19 @@
+@mixin clearfix(){
+	// &:before ,
+	// &:after {
+	// 	display: table;
+	// 	content: "";
+	// }
+
+	// &:after{
+	// 	clear: both;
+	// }
+
+	&:after {
+	    content: "\0020";
+	    display: block;
+	    height: 0;
+	    clear: both;
+	    visibility: hidden;
+	}
+}

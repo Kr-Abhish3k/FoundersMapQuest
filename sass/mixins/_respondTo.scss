@@ -1,0 +1,41 @@
+@mixin respond-to($type){
+
+	// Device ranges
+    $device-range-smartphone: 480px;
+    $device-range-tablet: 760px;
+    $device-range-ipad: 761px;
+    $device-range-laptop: 1000px; 
+    $device-range-widescreen: 1200px; 
+
+
+    @if $type == smartphone{  //1px to 480px
+    	@media screen and (min-width:1px) and (max-width: $device-range-smartphone){ 
+    		@content;
+    	}
+    }
+
+    @if $type == tablet{  //481px to 760px
+    	@media screen and (min-width: $device-range-smartphone + 1) and (max-width: $device-range-tablet){
+    		@content;
+    	}
+    }
+
+    @if $type == ipad{ //761px to 999px
+    	@media screen and (min-width: $device-range-ipad) and (max-width: $device-range-laptop - 1){
+    		@content;
+    	}
+    }
+
+    @if $type == laptop{ // >=1000px
+        @media screen and (min-width:$device-range-laptop){
+            @content;
+        }
+    }
+
+    @if $type==widescreen{
+        @media screen and (min-width:$device-range-widescreen){
+            @content;
+        }
+    }
+}
+
