@@ -1,22 +1,37 @@
 .container {
 	width: 100%;
-	position: fixed;
+	//position: fixed;
 	background-color: #509fa3;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	margin: 0 auto;
-	@include clearfix();
+	//@include clearfix();
 
 	.logo {
-		width: 300px;
+		padding: 10px 0;
+		width: 100%;
+		img {
+			max-width: 400px;
+			min-width: 200px;
+			width: 45%;
+		}
+
+
 	}
 
 	.navigation {
+		color:#ffffff;
+		text-align: right;
+		padding-right: 40px;
+		padding-top: 60px;
+		padding-bottom: 20px;
 
 		.menu {
 
 			.menu_item {
-
+				margin-bottom: 12px;
+				font-family:'Open Sans', sans-serif;
+				-webkit-font-smoothing: antialiased
 			}
 		}
 	}
