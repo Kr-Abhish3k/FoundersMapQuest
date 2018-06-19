@@ -3,26 +3,123 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
-		<title></title>
+		<title>Map Quest</title>
+
 	</head>
 	<body>
-		<header id="header">
-			<div class="container" id="home">
+		<header class="header" id="header">
+			<div class="container">
 				<div class="logo">
-					<img src="./images/logo_jr.png" alt="" >
+					<img src="images/logo_jr.png" alt="Website logo">
 				</div>
 
-				<div class="navigation">
-					<ul class="menu">
-						<li class="menu_item"><a>HOME</a></li>
-						<li class="menu_item"><a>RECENT ENTRIES</a></li>
-						<li class="menu_item"><a>ADD ENTRY</a></li>
-						<li class="menu_item"><a>CONTACT</a></li>
-					</ul>
-				</div>
+				<nav class="navigation">
+					<div class="navigation_wrapper">
+						<div class="navigation_Toggle Toggle">
+							<div class="Toggle_menu">
+								<div class="Toggle_menu_title">
+									MENU
+								</div>
+								<div class="Toggle_menu_control" onclick="openMenu(this)">
+									<span class="bar1"></span>
+									<span class="bar2"></span>
+									<span class="bar3"></span>
+								</div>
+							</div>
+							<ul class="Toggle_list List">
+								<li class="List_item"><a>Home</a></li>
+								<li class="List_item"><a>Toggle Map</a></li>
+								<li class="List_item"><a>Recent</a></li>
+								<li class="List_item"><a>Entries</a></li>
+								<li class="List_item"><a>Contact Us</a></li>
+							</ul>
+						</div>
+						<!-- <div class="navigation_List"></div> -->
+					</div>
+				</nav>
+
 			</div>
 		</header>
 
-		<footer id="footer"></footer>
+		<div class="map" id="map"></div>
+
+		<div class="entries">
+			<div class="container">
+				<h2>Entries</h2>
+				<p>Search your local area. Download file: <a href=""> csv </a> | <a href="" target="_blank"> json </a></p>
+				<hr>
+			</div>
+			<div class="entries_tableWrapper">
+				<table class="entries_table">
+					<thead>
+						<tr>
+							<th>ID</th>
+
+							<th>Company Name</th>
+
+							<th>FOunder</th>
+
+							<th>City</th>
+
+							<th>Website</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="entryForm">
+			<div class="formContainer">
+				<div class="entryForm_heading">
+					<h2>Add your Start-up</h2>
+					<p>So everyone can see you!</p>
+					<hr>
+				</div>
+				<div class="entryForm_Content">
+					<form action="" method="get" accept-charset="utf-8">
+						<input type="text" name="CompanyName" value="Company Name" placeholder="Company Name">
+						<input type="text" name="founder" value="founder" placeholder="founder">
+						<input type="text" name="city" value="city" placeholder="city">
+						<input type="text" name="company" value="company" placeholder="company">
+						<input type="text" name="website" value="website" placeholder="website">
+						<input type="text" name="latitude" value="latitude" placeholder="latitude">
+						<input type="text" name="longitude" value="longitude" placeholder="longitude">
+						<button type="submit" value="newEntry">Add Entry</button>
+					</form>
+				</div>
+
+				<div class="entryForm_base">
+					<img src="./images/startup-gears.jpg" alt="">
+				</div>
+
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<h2>Contact</h2>
+				<hr>
+				<p>Ioannis A. Raptis</p>
+
+				<ul class="footer_social">
+					<li class="footer_social_gmail"><a><img src="./images/gmail.png"></a></li>
+					<li class="footer_social_facebook"><a><img src="./images/fb.png"></a></li>
+					<li class="footer_social_linkedIn"><a><img src="./images/ln.png"></a></li>
+					<li class="footer_social_github"><a><img src="./images/git.gif"></a></li>
+					<li class="footer_social_nodeAthens"><a><img src="./images/odi.png"></a></li>
+					<li class="footer_social_xsoz"><a><img src="./images/xsoz.jpg"></a></li>
+				</ul>
+			</div>
+
+		</footer>
 	</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="javascripts/helper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascripts/googleMap.js" type="text/javascript" charset="utf-8"></script>
+		<script
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ5U7cNPXjSIhW2aS_y1pvJz4LEMb1yog&callback=initMap"></script>
+
 </html>
