@@ -2,16 +2,23 @@
 
 	// Device ranges
     $device-range-smartphone: 480px;
+    $device-range-smartphonePortrait: 766px;
     $device-range-tablet: 760px;
     $device-range-ipad: 761px;
-    $device-range-laptop: 1000px; 
-    $device-range-widescreen: 1200px; 
+    $device-range-laptop: 1000px;
+    $device-range-widescreen: 1200px;
 
 
     @if $type == smartphone{  //1px to 480px
-    	@media screen and (min-width:1px) and (max-width: $device-range-smartphone){ 
+    	@media screen and (min-width:1px) and (max-width: $device-range-smartphone){
     		@content;
     	}
+    }
+
+    @if $type == smartphonePortrait{  //480px to 766px
+        @media screen and (min-width:480px) and (max-width: $device-range-smartphonePortrait){
+            @content;
+        }
     }
 
     @if $type == tablet{  //481px to 760px

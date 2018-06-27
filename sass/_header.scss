@@ -5,6 +5,11 @@
 	right: 0;
 	width: 100%;
 	overflow: hidden;
+
+	@include respond-to(laptop) {
+		//height: 100px;
+	}
+
 	.container {
 		//z-index: 9999;
 		width: 100%;
@@ -12,15 +17,42 @@
 		background-color: #509fa3;
 		background-size: 100%;
 		background-repeat: no-repeat;
+		@include respond-to(laptop) {
+			@include clearfix;
+		}
 
 		.logo {
+			@include respond-to(tablet) {
+				width: 420px;
+			}
+
+			@include respond-to(laptop) {
+				width: 160px;
+				float: left;
+				margin-left: 10px;
+				margin-right: 10px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+
 			width: 300px;
 			img {
 				width: 100%;
 			}
 		}
 
+
 		.navigation {
+			@include respond-to(tablet) {
+				width: 420px;
+			}
+
+			@include respond-to(laptop) {
+				width: 80%;
+				float: left;
+				text-align: center;
+			}
+
 			width: 300px;
 
 			.navigation_wrapper {
@@ -35,6 +67,10 @@
 .Toggle {
 	width: 95%;
 	margin: 0 auto;
+
+	@include respond-to(laptop) {
+		display: none;
+	}
 
 	.Toggle_menu {
 		height: 36px;
@@ -104,5 +140,36 @@
 	.change & {
 		-webkit-transform: rotate(45deg) translate(-3px, -6px);
 	    transform: rotate(45deg) translate(-3px, -6px);
+	}
+}
+
+.navigation_List {
+	display: none;
+
+	@include respond-to(laptop) {
+		display: block;
+
+		.horizontal_List {
+			//@include clearfix;
+			//width:
+			.List_item {
+				//float: left;
+				display: inline;
+				 a {
+					padding: 8px 10px;
+					border: 2px solid #fff;
+					border-radius: 10px;
+					@include fontSize(14px);
+					margin-right: 10px;
+
+					&:hover {
+						background-color: #e09224;
+						color: #16738F;
+						border-color: #e09224;
+					}
+				 }
+			}
+		}
+
 	}
 }

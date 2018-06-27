@@ -10,12 +10,38 @@
     background-color: #509fa3;
     background-size: 100%;
     background-repeat: no-repeat; }
+    @media screen and (min-width: 1000px) {
+      .header .container:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; } }
     .header .container .logo {
       width: 300px; }
+      @media screen and (min-width: 481px) and (max-width: 760px) {
+        .header .container .logo {
+          width: 420px; } }
+      @media screen and (min-width: 1000px) {
+        .header .container .logo {
+          width: 160px;
+          float: left;
+          margin-left: 10px;
+          margin-right: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px; } }
       .header .container .logo img {
         width: 100%; }
     .header .container .navigation {
       width: 300px; }
+      @media screen and (min-width: 481px) and (max-width: 760px) {
+        .header .container .navigation {
+          width: 420px; } }
+      @media screen and (min-width: 1000px) {
+        .header .container .navigation {
+          width: 80%;
+          float: left;
+          text-align: center; } }
       .header .container .navigation .navigation_wrapper {
         padding-top: 60px;
         padding-bottom: 20px; }
@@ -23,6 +49,9 @@
 .Toggle {
   width: 95%;
   margin: 0 auto; }
+  @media screen and (min-width: 1000px) {
+    .Toggle {
+      display: none; } }
   .Toggle .Toggle_menu {
     height: 36px;
     position: relative; }
@@ -66,6 +95,25 @@
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-3px, -6px);
   transform: rotate(45deg) translate(-3px, -6px); }
+
+.navigation_List {
+  display: none; }
+  @media screen and (min-width: 1000px) {
+    .navigation_List {
+      display: block; }
+      .navigation_List .horizontal_List .List_item {
+        display: inline; }
+        .navigation_List .horizontal_List .List_item a {
+          padding: 8px 10px;
+          border: 2px solid #fff;
+          border-radius: 10px;
+          font-size: 14pxpx;
+          font-size: 0.875pxrem;
+          margin-right: 10px; }
+          .navigation_List .horizontal_List .List_item a:hover {
+            background-color: #e09224;
+            color: #16738F;
+            border-color: #e09224; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -205,7 +253,29 @@ p a, p a:visited {
   padding-bottom: 80px; }
   .entryForm .formContainer {
     margin: 0 auto;
-    width: 300px; }
+    min-width: 300px;
+    width: 56%; }
+    @media screen and (min-width: 761px) and (max-width: 999px) {
+      .entryForm .formContainer {
+        width: 768px;
+        margin-right: 10px;
+        margin-left: 5px; }
+        .entryForm .formContainer:after {
+          content: "\0020";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden; } }
+    @media screen and (min-width: 1000px) {
+      .entryForm .formContainer {
+        width: 100%;
+        margin: 0px 10px; }
+        .entryForm .formContainer:after {
+          content: "\0020";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden; } }
     .entryForm .formContainer .entryForm_heading {
       text-align: center;
       text-align: -webkit-center; }
@@ -225,7 +295,21 @@ p a, p a:visited {
         border: 2px solid #fff;
         margin: 8px 0px 0px 20px; }
     .entryForm .formContainer .entryForm_Content {
-      width: 300px; }
+      width: 100%; }
+      @media screen and (min-width: 761px) and (max-width: 999px) {
+        .entryForm .formContainer .entryForm_Content {
+          float: left;
+          display: inline;
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 65%; } }
+      @media screen and (min-width: 1000px) {
+        .entryForm .formContainer .entryForm_Content {
+          float: left;
+          display: inline;
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 620px; } }
       .entryForm .formContainer .entryForm_Content form {
         margin-bottom: 20px; }
         .entryForm .formContainer .entryForm_Content form input {
@@ -254,8 +338,21 @@ p a, p a:visited {
           .entryForm .formContainer .entryForm_Content form button:hover {
             background: #e09224; }
     .entryForm .formContainer .entryForm_base {
-      width: 300px;
+      width: 100%;
       padding-top: 155px; }
+      @media screen and (min-width: 761px) and (max-width: 999px) {
+        .entryForm .formContainer .entryForm_base {
+          float: left;
+          display: inline;
+          width: 230px;
+          margin-left: 10px; } }
+      @media screen and (min-width: 1000px) {
+        .entryForm .formContainer .entryForm_base {
+          float: left;
+          display: inline;
+          width: 300px;
+          margin-left: 10px;
+          padding-top: 75px; } }
       .entryForm .formContainer .entryForm_base img {
         width: 100%; }
 
@@ -315,6 +412,12 @@ p a, p a:visited {
   .footer .container {
     width: 300px;
     margin: 0 auto; }
+    @media screen and (min-width: 481px) and (max-width: 760px) {
+      .footer .container {
+        width: 420px; } }
+    @media screen and (min-width: 1000px) {
+      .footer .container {
+        width: 100%; } }
     .footer .container h2 {
       color: #16738F;
       font-family: 'Open Sans', sans-serif;
@@ -349,6 +452,10 @@ p a, p a:visited {
       height: 0;
       clear: both;
       visibility: hidden; }
+    @media screen and (min-width: 1000px) {
+      .footer .container .footer_social {
+        width: 900px;
+        margin: 0 auto; } }
     .footer .container .footer_social li {
       float: left;
       margin-right: 10px;

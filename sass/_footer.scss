@@ -4,6 +4,14 @@
 	padding-bottom: 80px;
 
 	.container {
+		@include respond-to(tablet) {
+			width: 420px;
+		}
+
+		@include respond-to(laptop) {
+			width: 100%;
+		}
+
 		width: 300px;
 		margin: 0 auto;
 
@@ -43,6 +51,11 @@
 
 		.footer_social {
 			@include clearfix;
+
+			 @include respond-to(laptop) {
+				width: 900px;
+				margin: 0 auto;
+			 }
 
 			li {
 				float: left;

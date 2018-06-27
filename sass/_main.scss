@@ -14,7 +14,21 @@
 
 	.formContainer {
 		margin: 0 auto;
-		width: 300px;
+		min-width: 300px;
+		width: 56%;
+
+		@include respond-to(ipad) {
+			width: 768px;
+			@include clearfix;
+			margin-right: 10px;
+			margin-left: 5px;
+		}
+
+		@include respond-to(laptop) {
+			@include clearfix;
+			width: 100%;
+			margin: 0px 10px;
+		}
 
 		.entryForm_heading {
 			text-align: center;
@@ -48,8 +62,23 @@
 		}
 
 		.entryForm_Content {
+			@include respond-to(ipad) {
+				float: left;
+				display: inline;
+				margin-left: 10px;
+				margin-right: 10px;
+				width: 65%;
+			}
 
-			width: 300px;
+			@include respond-to(laptop) {
+				float: left;
+				display: inline;
+				margin-left: 10px;
+				margin-right: 10px;
+				width: 620px;
+			}
+
+			width: 100%;
 
 			form {
 				margin-bottom: 20px;
@@ -88,8 +117,22 @@
 		}
 
 		.entryForm_base{
-			//width: 420px;
-			width: 300px;
+			@include respond-to(ipad) {
+				float: left;
+				display: inline;
+				width: 230px;
+				margin-left: 10px;
+			}
+
+			@include respond-to(laptop) {
+				float: left;
+				display: inline;
+				width: 300px;
+				margin-left: 10px;
+				padding-top: 75px;
+			}
+
+			width: 100%;
 			padding-top: 155px;
 
 			img {
