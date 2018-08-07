@@ -1,0 +1,46 @@
+.entries_PaginationWrapper {
+	position: relative;
+	.entries_info {
+		margin-top: 10px;
+		margin-bottom: 0px;
+		color: #333 !important;
+	}
+
+	.entries_pagination {
+		text-align: center;
+		margin-top: 5px;
+	}
+}
+
+.Page {
+
+	.pageButton {
+		display: inline-block;
+		height: 25px;
+		width: 25px;
+		border: 1px solid #999999;
+	}
+
+	.Page_previousBtn {
+
+		background: url("../images/icon-arrow-right-white.svg") no-repeat center;
+		transform: rotate(180deg);
+	}
+
+	.Page_nextBtn {
+		background: url("../images/icon-arrow-right-white.svg") no-repeat center;
+	}
+
+	.Page_pageNumber {
+		text-align: center;
+		display: inline-block;
+		height: 20px;
+		width: 25px;
+		padding-top: 5px;
+		vertical-align: top;
+		border: 1px solid #999999;
+		background-color: #fff;
+
+	}
+
+}

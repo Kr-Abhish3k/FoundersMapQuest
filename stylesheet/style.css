@@ -278,7 +278,8 @@ p a, p a:visited {
           visibility: hidden; } }
     .entryForm .formContainer .entryForm_heading {
       text-align: center;
-      text-align: -webkit-center; }
+      text-align: -webkit-center;
+      text-align: -moz-center; }
       .entryForm .formContainer .entryForm_heading h2, .entryForm .formContainer .entryForm_heading p {
         color: #ffffff;
         text-align: center;
@@ -307,7 +308,7 @@ p a, p a:visited {
         .entryForm .formContainer .entryForm_Content {
           float: left;
           display: inline;
-          margin-left: 10px;
+          margin-left: 10%;
           margin-right: 10px;
           width: 620px; } }
       .entryForm .formContainer .entryForm_Content form {
@@ -351,7 +352,7 @@ p a, p a:visited {
           float: left;
           display: inline;
           width: 300px;
-          margin-left: 10px;
+          margin-left: 10%;
           padding-top: 75px; } }
       .entryForm .formContainer .entryForm_base img {
         width: 100%; }
@@ -394,16 +395,54 @@ p a, p a:visited {
   .entries .entries_tableWrapper {
     width: 100%; }
     .entries .entries_tableWrapper .entries_table {
-      width: 98%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: #444; }
       .entries .entries_tableWrapper .entries_table thead {
         border-bottom: 1px solid #000; }
         .entries .entries_tableWrapper .entries_table thead th {
+          background: #BF5A24;
           padding: 10px 18px;
           color: #fff;
           font-weight: bold; }
       .entries .entries_tableWrapper .entries_table tbody {
-        background: #fff; }
+        background: #fff;
+        text-align: center; }
+        .entries .entries_tableWrapper .entries_table tbody tr:nth-child(even) {
+          background: #f9f9f9; }
+        .entries .entries_tableWrapper .entries_table tbody tr td {
+          padding: 8px 10px;
+          border-top: 1px solid #ddd; }
+
+.entries_PaginationWrapper {
+  position: relative; }
+  .entries_PaginationWrapper .entries_info {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: #333 !important; }
+  .entries_PaginationWrapper .entries_pagination {
+    text-align: center;
+    margin-top: 5px; }
+
+.Page .pageButton {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #999999; }
+.Page .Page_previousBtn {
+  background: url("../images/icon-arrow-right-white.svg") no-repeat center;
+  transform: rotate(180deg); }
+.Page .Page_nextBtn {
+  background: url("../images/icon-arrow-right-white.svg") no-repeat center; }
+.Page .Page_pageNumber {
+  text-align: center;
+  display: inline-block;
+  height: 20px;
+  width: 25px;
+  padding-top: 5px;
+  vertical-align: top;
+  border: 1px solid #999999;
+  background-color: #fff; }
 
 .footer {
   background-color: #decdb6;

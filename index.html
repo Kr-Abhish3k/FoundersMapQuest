@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
 		<title>Map Quest</title>
-
 	</head>
 	<body>
 		<header class="header" id="header">
@@ -58,26 +57,27 @@
 				<h2>Entries</h2>
 				<p>Search your local area. Download file: <a href=""> csv </a> | <a href="" target="_blank"> json </a></p>
 				<hr>
-			</div>
-			<div class="entries_tableWrapper">
-				<table class="entries_table">
-					<thead>
-						<tr>
-							<th>ID</th>
 
-							<th>Company Name</th>
+				<div class="entries_tableWrapper">
+					<table class="entries_table">
+						<thead>
+							<tr>
+								<th>Id</th><th>Company Name</th><th>Founder</th><th>City</th><th>Country</th><th>Postal Code</th><th>Street</th><th>Home Page</th><th>Garage Latitude</th><th>Garage Longitude</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
 
-							<th>FOunder</th>
+				<div class="entries_PaginationWrapper">
+					<p class="entries_info">Showing 1 to 10 of 10 entries</p>
+					<div class="entries_pagination Page">
+						<a class="Page_previousBtn pageButton" title="Previous Page"></a>
+						<span class="Page_pageNumber">1</span>
+						<a class="Page_nextBtn pageButton" title="Next Page" ></a>
+					</div>
+				</div>
 
-							<th>City</th>
 
-							<th>Website</th>
-						</tr>
-					</thead>
-					<tbody>
-
-					</tbody>
-				</table>
 			</div>
 		</div>
 
@@ -90,13 +90,13 @@
 				</div>
 				<div class="entryForm_Content">
 					<form action="" method="get" accept-charset="utf-8">
-						<input type="text" name="CompanyName" value="Company Name" placeholder="Company Name">
-						<input type="text" name="founder" value="founder" placeholder="founder">
-						<input type="text" name="city" value="city" placeholder="city">
-						<input type="text" name="company" value="company" placeholder="company">
-						<input type="text" name="website" value="website" placeholder="website">
-						<input type="text" name="latitude" value="latitude" placeholder="latitude">
-						<input type="text" name="longitude" value="longitude" placeholder="longitude">
+						<input type="text" name="CompanyName"  placeholder="Company Name">
+						<input type="text" name="founder"  placeholder="founder">
+						<input type="text" name="city"  placeholder="city">
+						<input type="text" name="company"  placeholder="company">
+						<input type="text" name="website"  placeholder="website">
+						<input type="text" name="latitude"  placeholder="latitude">
+						<input type="text" name="longitude"  placeholder="longitude">
 						<button type="submit" value="newEntry">Add Entry</button>
 					</form>
 				</div>
@@ -126,10 +126,18 @@
 
 		</footer>
 	</body>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="javascripts/jquery.csv.js"></script> -->
+		<!-- <script src="javascripts/helper.js" type="text/javascript" charset="utf-8"></script> -->
+		<!-- <script src="bundle/bundle.js" type="text/javascript" charset="utf-8"></script> -->
+		<!-- <script src="javascripts/main.js" type="text/javascript" charset="utf-8"></script> -->
+		<!-- <script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script> -->
+		<!-- <script src="javascripts/pagination.js" type="text/javascript" charset="utf-8"></script> -->
 		<script src="javascripts/helper.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/googleMap.js" type="text/javascript" charset="utf-8"></script>
 		<script
 	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ5U7cNPXjSIhW2aS_y1pvJz4LEMb1yog&callback=initMap"></script>
+	    <script src="bundle/bundle.js" type="text/javascript" charset="utf-8"></script>
 
 </html>

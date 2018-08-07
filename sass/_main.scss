@@ -33,6 +33,7 @@
 		.entryForm_heading {
 			text-align: center;
 			text-align: -webkit-center;
+			text-align: -moz-center;
 
 
 			h2 , p{
@@ -73,7 +74,7 @@
 			@include respond-to(laptop) {
 				float: left;
 				display: inline;
-				margin-left: 10px;
+				margin-left: 10%;
 				margin-right: 10px;
 				width: 620px;
 			}
@@ -128,7 +129,7 @@
 				float: left;
 				display: inline;
 				width: 300px;
-				margin-left: 10px;
+				margin-left: 10%;
 				padding-top: 75px;
 			}
 
@@ -191,12 +192,16 @@
 		width: 100%;
 
 		.entries_table {
-			width: 98%;
+
 			margin: 0 auto;
+			font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+			color: #444;
+
 
 			thead {
 			border-bottom: 1px solid #000;
 				th {
+					background: #BF5A24;
 					padding: 10px 18px;
 					color: #fff;
 					font-weight: bold;
@@ -205,6 +210,19 @@
 
 			tbody {
 				background: #fff;
+				text-align: center;
+
+				tr {
+					&:nth-child(even) {
+						background: #f9f9f9;
+					}
+
+					td {
+						padding: 8px 10px;
+						border-top: 1px solid #ddd;
+					}
+
+				}
 			}
 		}
 	}
