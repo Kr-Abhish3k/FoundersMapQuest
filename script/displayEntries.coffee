@@ -6,10 +6,12 @@ window.Displaydata = class window.DisplayData
 	constructor: ->
 		@main = new Main()
 		@paginationObj = new Pagination()
+		@addEntry = new addEntry()
 
 		@tableWrapper = $(".entries_tableWrapper")
 		@previousPage = $(".Page_previousBtn")
 		@nextPage = $(".Page_nextBtn")
+		@formSubmit = $(".entryForm_submit")
 
 		@data = []
 		@entriesCount= ''
@@ -21,6 +23,9 @@ window.Displaydata = class window.DisplayData
 		@data = @main.fetchData()
 		@totalEntries = @data.length
 		@changePage(1)
+
+		@formSubmit.on 'click',()=>
+			@addEntry.newEntry()
 
 		$(".Page_nextBtn").on 'click',() =>
 			# debugger

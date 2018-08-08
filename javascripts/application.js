@@ -10,9 +10,11 @@
     constructor() {
       this.main = new Main();
       this.paginationObj = new Pagination();
+      this.addEntry = new addEntry();
       this.tableWrapper = $(".entries_tableWrapper");
       this.previousPage = $(".Page_previousBtn");
       this.nextPage = $(".Page_nextBtn");
+      this.formSubmit = $(".entryForm_submit");
       this.data = [];
       this.entriesCount = '';
       this.currentPage = '';
@@ -23,6 +25,9 @@
       this.data = this.main.fetchData();
       this.totalEntries = this.data.length;
       this.changePage(1);
+      this.formSubmit.on('click', () => {
+        return this.addEntry.newEntry();
+      });
       $(".Page_nextBtn").on('click', () => {
         var that;
         // debugger

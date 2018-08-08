@@ -1,7 +1,5 @@
 window.Main = class window.Main
 	constructor:->
-		@httpRequest = new XMLHttpRequest()
-
 
 	init:->
 		@fetchData()
