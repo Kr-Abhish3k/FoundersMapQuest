@@ -7,6 +7,7 @@ var path = require('path');
 // 	}
 // }
 
+
 module.exports = {
 	mode: 'production',
 	entry : ["./javascripts/index.js", "./sass/style.scss"],

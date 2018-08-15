@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="./stylesheet/style.css">
 		<title>Map Quest</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="bundle/bundle.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<header class="header" id="header">
@@ -62,7 +64,7 @@
 					<table class="entries_table">
 						<thead>
 							<tr>
-								<th>Id</th><th>Company Name</th><th>Founder</th><th>City</th><th>Country</th><th>Postal Code</th><th>Street</th><th>Home Page</th><th>Garage Latitude</th><th>Garage Longitude</th>
+								<th>Id</th><th>Company Name</th><th>Founder</th><th>City</th><th>Country</th><th>Postal Code</th><th>Street</th><th>Home Page</th>
 							</tr>
 						</thead>
 					</table>
@@ -87,15 +89,18 @@
 					<hr>
 				</div>
 				<div class="entryForm_Content">
-					<form method="POST" accept-charset="utf-8">
-						<input type="text" name="CompanyName"  placeholder="Company Name" >
-						<input type="text" name="founder"  placeholder="founder" >
-						<input type="text" name="city"  placeholder="city" >
-						<input type="text" name="companyAddress"  placeholder="company Address" >
-						<input type="text" name="website"  placeholder="website" >
-						<input type="text" name="latitude"  placeholder="latitude">
-						<input type="text" name="longitude"  placeholder="longitude">
-						<button class="entryForm_submit" type="submit" value="newEntry">Add Entry</button>
+					<form id ="form" method="post" accept-charset="utf-8"> 
+						<input id = "CompanyName" type="text" name="CompanyName"  placeholder="Company Name" >
+						<input id = "founder" type="text" name="founder"  placeholder="founder" >
+						<input id = "city" type="text" name="city"  placeholder="city" >
+						<input id = "country" type="text" name="country"  placeholder="country" >
+						<input id = "postalCode" type="text" name="postalCode"  placeholder="Postal Code" >
+						<input id = "streetAddress" type="text" name="streetAddress"  placeholder="Street Address" >
+						<input id = "photoLink" type="text" name="photoLink"  placeholder="Photo Link" >
+						<input id = "website" type="text" name="website"  placeholder="website" >
+						<input id = "latitude" type="text" name="latitude"  placeholder="latitude">
+						<input id = "longitude" type="text" name="longitude"  placeholder="longitude">
+						<button id = "submitBtn" class="entryForm_submit" type="submit" value="newEntry">Add Entry</button>
 					</form>
 				</div>
 
@@ -125,7 +130,7 @@
 		</footer>
 	</body>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
 		<!-- <script type="text/javascript" src="javascripts/jquery.csv.js"></script> -->
 		<!-- <script src="javascripts/helper.js" type="text/javascript" charset="utf-8"></script> -->
 		<!-- <script src="bundle/bundle.js" type="text/javascript" charset="utf-8"></script> -->
@@ -136,6 +141,6 @@
 		<script src="javascripts/googleMap.js" type="text/javascript" charset="utf-8"></script>
 		<script
 	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ5U7cNPXjSIhW2aS_y1pvJz4LEMb1yog&callback=initMap"></script>
-	    <script src="bundle/bundle.js" type="text/javascript" charset="utf-8"></script>
+	    
 
 </html>

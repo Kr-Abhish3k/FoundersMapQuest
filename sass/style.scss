@@ -1,10 +1,10 @@
-@import "./mixins/clearfix",
-		 "./mixins/fontsize",
-		 "./mixins/respondTo";
-
-@import "./header",
-		 "./reset",
-		 "./base",
-		 "./main",
-		 "./pagination",
-		 "./footer";
+@import 'mixins/clearfix',
+		'mixins/fontsize',
+		'mixins/respondTo';
+		
+@import 'base',
+		'footer',
+		'header',
+		'main',
+		'pagination',
+		'reset';

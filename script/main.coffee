@@ -1,9 +1,8 @@
 window.Main = class window.Main
 	constructor:->
-
+		
 	init:->
 		@fetchData()
-
 
 	fetchData:->
 		dataArray = []

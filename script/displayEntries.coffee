@@ -8,10 +8,11 @@ window.Displaydata = class window.DisplayData
 		@paginationObj = new Pagination()
 		@addEntry = new addEntry()
 
+
 		@tableWrapper = $(".entries_tableWrapper")
 		@previousPage = $(".Page_previousBtn")
 		@nextPage = $(".Page_nextBtn")
-		@formSubmit = $(".entryForm_submit")
+		
 
 		@data = []
 		@entriesCount= ''
@@ -24,14 +25,12 @@ window.Displaydata = class window.DisplayData
 		@totalEntries = @data.length
 		@changePage(1)
 
-		@formSubmit.on 'click',()=>
-			@addEntry.newEntry()
+		$("#form").submit ()=>
+			@addEntry.validateEntries()
+
 
 		$(".Page_nextBtn").on 'click',() =>
-			# debugger
-			that=this
 			@currentPage = $(".Page_pageNumber").text()
-			#@nextPage()
 			@pageNext()
 
 		$(".Page_previousBtn").on 'click',(e) =>
@@ -46,7 +45,7 @@ window.Displaydata = class window.DisplayData
 
 	pageNext:() ->
 		if(@currentPage < @numOfPages())
-			@currentPage++;
+			@currentPage++
 			@changePage(@currentPage)
 			@paginationObj.updatePageNo(@currentPage)
 
@@ -67,7 +66,8 @@ window.Displaydata = class window.DisplayData
 			if rowCount < 5
 				rowCells = allRows[index]
 				for element , rowIndex in rowCells
-					unless rowIndex == 7 #to avoid making column "Photo"
+					#skip to avoid making column Photo ,latitude & longitude
+					unless rowIndex == 7 || rowIndex == 9 || rowIndex == 10
 						element = element.replace(/"/g, "")
 						cell= $("<td>"+element+"</td>")
 						row.append(cell)
@@ -83,6 +83,7 @@ window.Displaydata = class window.DisplayData
 	changePage :(page) ->
 		@listingTable = $(".entries_table_body")
 		tabledata =[]
+
 		#validate Page
 		if(page <= 1)
 			page = 1
